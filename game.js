@@ -5,9 +5,6 @@
 
 // ---------- DOM ----------
 
-let participantName = "";
-
-
 // 画面
 const startScreen = document.getElementById("startScreen");
 const countdown = document.getElementById("countdown");
@@ -297,9 +294,6 @@ function finishGame() {
 
     // 表示
 
-    document.getElementById("resultParticipantName").textContent = participantName;
-
-
     document.getElementById("finalLeftScore")
     .textContent = leftCorrect;
 
@@ -333,16 +327,6 @@ function finishGame() {
 // =========================================
 
 startButton.addEventListener("click", () => {
-
-    participantName =
-        document.getElementById("participantName").value.trim();
-
-    if(participantName === ""){
-
-        alert("被験者名を入力してください。");
-        return;
-
-    }
 
     startCountdown();
 
@@ -394,8 +378,6 @@ function answer(side, choiceIndex){
     if(choiceIndex === data.correctIndex){
 
         resultData.push({
-
-            participantName: participantName,
 
             trial: trialNumber++,
 
