@@ -31,8 +31,66 @@ body{
 }
 
 /* =========================================
-   スタート画面
+   ダイアログ画面
 ========================================= */
+
+
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.rules-dialog {
+  width: 100%;
+  max-width: 520px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.rules-dialog h2 {
+  margin-top: 0;
+  color: #20354f;
+  font-size: 23px;
+}
+
+.rules-dialog p,
+.rules-dialog li {
+  color: #374151;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.rules-dialog li {
+  margin-bottom: 8px;
+}
+
+#rules-confirm {
+  width: 100%;
+  margin-top: 16px;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #426b9a;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#rules-confirm:hover {
+  background: #34577f;
+}
+
 
 /* =========================================
    スタート画面
