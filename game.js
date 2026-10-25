@@ -326,8 +326,24 @@ function finishGame() {
 // スタートボタン
 // =========================================
 
-startButton.addEventListener("click", () => {
 
+const rulesDialog = document.getElementById("rules-dialog");
+const rulesConfirm = document.getElementById("rules-confirm");
+
+// ページを開いた時点でルール説明を表示
+let rulesConfirmed = false;
+
+// 確認ボタンを押すまでスタートできない
+rulesConfirm.addEventListener("click", () => {
+  rulesConfirmed = true;
+  rulesDialog.style.display = "none";
+});
+
+
+startButton.addEventListener("click", () => {
+  if (!rulesConfirmed) {
+    return;
+  }
     startCountdown();
 
 });
